@@ -13,6 +13,27 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="card-background-page">
+  <ion-card (click)="openGrades()" >
+    <img src="../../assets/imgs/Grados.jpg" />
+    <div class="card-title">Grados</div>
+  </ion-card>
+  <ion-card (click)="openMasters()">
+    <img src = "../../assets/imgs/Masters.jpg" />
+    <div class="card-title">Másters</div>
+  </ion-card>
+  <ion-card (click)="openPhD()">
+    <img src = "../../assets/imgs/Doctorado.jpg" />
+    <div class="card-title">Doctorado</div>
 
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Información complementaria
+    </ion-card-header>
+    <ion-card-content>
+      Consulta la <a href = "https://www.ual.es/estudios">web de estudios en la UAL</a>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

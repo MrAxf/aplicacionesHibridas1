@@ -1,0 +1,26 @@
+<!--
+  Generated template for the GradosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Grados</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-item-group>
+    <ion-list *ngFor="let rama of estudios">
+      <ion-item-divider>{{rama.rama}}</ion-item-divider>
+      <ion-item *ngFor="let gradoRama of rama.estudios" (click)="openURL(gradoRama.url)">
+        <h2>{{gradoRama.estudios}}</h2>
+        <p>{{gradoRama.plan}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-item-group>
+</ion-content>
