@@ -1,17 +1,56 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Contacto
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
+  <img src = "../../assets/imgs/UAL.png"> 
+
+  <ion-list> 
+    <ion-item (click)="openURL('https://www.google.com/maps/dir/?api=1&destination=Universidad%20de%20Almer%C3%ADa')"> 
+      <ion-icon name = "pin" item-start></ion-icon> 
+      <p>Carretera Sacramento s/n</p> 
+      <p>04120 La Cañada de San Urbano</p>
+      <p>Almería</p>
+    </ion-item>
+
+    <ion-item (click)="openURL('https://cms.ual.es/UAL/contacto/index.htm')">
+      <ion-icon name = "mail" item-start></ion-icon>
+      <p>Contacta con nostros</p>
     </ion-item>
   </ion-list>
+
+  <ion-item-group> 
+    <ion-item-divider color="light">Teléfonos de interés</ion-item-divider> 
+    <ion-item (click)="call('950214000')"> 
+      <h2>Información general para estudiantes (Secretaría)</h2> 
+      <p>+34 950 21 40 00</p>
+      <ion-icon name = "call" item-end></ion-icon> 
+    </ion-item>
+    <ion-item (click)="call('950214999')">
+      <h2>Cita previa</h2>
+      <p>+34 950 21 49 99</p>
+      <ion-icon name = "call" item-end></ion-icon>
+    </ion-item>
+    <ion-item (click)="call('950015550')">
+      <h2>Conserjería del Edificio Central</h2>
+      <p>+34 950 01 55 50</p>
+      <ion-icon name = "call" item-end></ion-icon>
+    </ion-item>
+
+    <ion-item-divider color="light">Centro de atención al usuario</ion-item-divider>
+
+    <ion-item (click)="openURL('https://otrspas.ual.es/otrs/customer.pl')"> 
+      <ion-icon name = "link" item-end></ion-icon>
+      <p>CAU de Administración y Servicios</p>
+    </ion-item>
+    <ion-item (click)="openURL('https://otrs5.ual.es/otrs/customer.pl')">
+      <ion-icon name = "link" item-end></ion-icon>
+      <p>CAU de Servicios TIC</p>
+    </ion-item>
+
+  </ion-item-group>
 </ion-content>
