@@ -18,8 +18,8 @@ export class ContactPage {
 
   call(phoneNumber: string) { 
     this.callNumber.callNumber(phoneNumber, true)
-  .then(res => console.log('Launched dialer!', res))
-  .catch(err => console.log('Error launching dialer', err));
+      .then(res => console.log('Launched dialer!', res))
+      .catch(err => console.log('Error launching dialer', err));
 
   }
 
