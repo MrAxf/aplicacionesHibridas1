@@ -1,5 +1,6 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
@@ -10,10 +11,13 @@ import { EstudiosPage } from '../pages/estudios/estudios';
 import { GradosPage } from '../pages/grados/grados';
 import { MastersPage } from '../pages/masters/masters';
 import { DoctoradoPage } from '../pages/doctorado/doctorado';
+import { NoticiasPage } from '../pages/noticias/noticias';
+import { NoticiaPage } from '../pages/noticia/noticia';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { CallNumber } from '@ionic-native/call-number';
+import { NoticiasProvider } from '../providers/noticias/noticias';
 
 @NgModule({
   declarations: [
@@ -24,10 +28,13 @@ import { CallNumber } from '@ionic-native/call-number';
     GradosPage,
     MastersPage,
     DoctoradoPage,
+    NoticiasPage,
+    NoticiaPage,
     TabsPage
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -39,13 +46,16 @@ import { CallNumber } from '@ionic-native/call-number';
     GradosPage,
     MastersPage,
     DoctoradoPage,
+    NoticiasPage,
+    NoticiaPage,
     TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     CallNumber,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    NoticiasProvider
   ]
 })
 export class AppModule {}
